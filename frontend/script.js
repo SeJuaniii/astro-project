@@ -1,1 +1,2 @@
-console.log("¡Hola universo!");
+// script.js
+console.log("¡Bienvenido a Astro Project, el universo te espera!");
