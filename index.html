@@ -8,9 +8,8 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- HEADER: Contendrá el logo, menú de navegación y el título principal -->
+  <!-- HEADER -->
   <header>
-    <h1>Astro Project</h1>
     <nav>
       <ul>
         <li><a href="#noticias">Noticias</a></li>
@@ -21,50 +20,62 @@
         <li><a href="#datos">Datos en Tiempo Real</a></li>
       </ul>
     </nav>
+    <!-- Botón para cambiar el fondo -->
+    <button id="toggleBackground">Cambiar fondo</button>
   </header>
 
-  <!-- SECCIÓN: Noticias espaciales -->
-  <section id="noticias">
-    <h2>Noticias Espaciales</h2>
-    <p>Aquí se mostrarán las últimas noticias del mundo astronómico.</p>
+  <!-- SECCIÓN HERO -->
+  <section id="hero">
+    <div class="hero-content">
+      <h1>Explora el Universo</h1>
+      <p>Descubre los secretos del cosmos y aprende sobre los misterios del espacio.</p>
+      <button class="hero-btn" onclick="irASeccion('noticias')">Explorar</button>
+    </div>
   </section>
 
-  <!-- SECCIÓN: Enciclopedia de objetos astronómicos -->
-  <section id="enciclopedia">
-    <h2>Enciclopedia Astronómica</h2>
-    <p>Información sobre planetas, estrellas, galaxias, exoplanetas, y más.</p>
-  </section>
+  <!-- Encabezado secundario (opcional) -->
+  <div class="title-section">
+    <h2>Astro Project</h2>
+  </div>
 
-  <!-- SECCIÓN: Visualizaciones interactivas -->
-  <section id="visualizaciones">
-    <h2>Visualizaciones Interactivas</h2>
-    <p>Visualizaciones y animaciones en 3D de sistemas solares, órbitas y otros fenómenos.</p>
-  </section>
+  <!-- Secciones de contenido -->
+  <section id="noticias" class="seccion">
+    <h2>🪐 Noticias Espaciales</h2>
+    <div class="noticia">
+      <h3>🌌 Nuevo descubrimiento en una galaxia lejana</h3>
+      <p>Un equipo de astrónomos ha detectado señales de una posible nueva forma de materia oscura en una galaxia a 500 millones de años luz.</p>
+      <a href="#" class="leer-mas">Leer más</a>
+    </div>
+    <div class="noticia">
+      <h3>🚀 Éxito total en el lanzamiento de Artemis II</h3>
+      <p>La NASA ha lanzado con éxito la misión Artemis II, marcando el regreso del ser humano a la órbita lunar.</p>
+      <a href="#" class="leer-mas">Leer más</a>
+    </div>
+    <div class="noticia">
+      <h3>🛰️ Telescopio espacial capta una supernova</h3>
+      <p>El telescopio James Webb captó imágenes detalladas de una supernova en una etapa nunca antes vista.</p>
+      <a href="#" class="leer-mas">Leer más</a>
+    </div>
+  </section>  
+        </article>
+  
+        <!-- Tarjeta de Noticia 2 -->
+        <article class="noticia">
+          <img src="https://via.placeholder.com/150" alt="Imagen de la noticia">
+          <div class="noticia-contenido">
+            <h3>Exploración del Sol</h3>
+            <p>La sonda Parker Solar Probe se acerca más que nunca al Sol para estudiar su atmósfera.</p>
+            <a href="#" class="leer-mas">Leer más</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>  
+  <!-- Resto de secciones (enciclopedia, etc.) -->
 
-  <!-- SECCIÓN: Educación -->
-  <section id="educacion">
-    <h2>Educación y Guías</h2>
-    <p>Artículos, guías y recursos educativos sobre astronomía.</p>
-  </section>
-
-  <!-- SECCIÓN: Galería de imágenes -->
-  <section id="galeria">
-    <h2>Galería Espacial</h2>
-    <p>Imágenes impresionantes del universo tomadas por telescopios y sondas espaciales.</p>
-  </section>
-
-  <!-- SECCIÓN: Datos en tiempo real -->
-  <section id="datos">
-    <h2>Datos en Tiempo Real</h2>
-    <p>Información actualizada del espacio: posición de la ISS, actividad solar, etc.</p>
-  </section>
-
-  <!-- FOOTER: Información de contacto, créditos o notas adicionales -->
   <footer>
-    <p>&copy; 2025 Astro Project. Todos los derechos reservados.</p>
+    <p>© 2025 Astro Project</p>
   </footer>
 
-  <!-- Vincula el JavaScript -->
   <script src="script.js"></script>
 </body>
-</html>

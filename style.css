@@ -1,63 +1,182 @@
-/* Reset simple para quitar márgenes predeterminados */
+/* 1. Ajuste general */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Estilo del body: fondo oscuro y fuente legible */
 body {
   background-color: #000;
   color: #fff;
-  font-family: Arial, sans-serif;
+  font-family: sans-serif;
   line-height: 1.6;
-  padding: 20px;
+  transition: background-color 0.5s, color 0.5s;
 }
 
-/* Estilo para el header */
+/* 2. Header */
 header {
-  text-align: center;
-  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #111; /* Un fondo un poco diferente al hero */
 }
 
-header h1 {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
-}
-
-/* Menú de navegación */
-nav ul {
+header nav ul {
   list-style: none;
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+  gap: 1rem;
 }
 
-nav ul li {
-  margin: 0 15px;
-}
-
-nav ul li a {
+header nav ul li a {
   text-decoration: none;
   color: #fff;
-  font-weight: bold;
 }
 
-/* Estilo para cada sección */
+#toggleBackground {
+  padding: 0.5rem 1rem;
+  background: #444;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+/* 3. Sección Hero */
+#hero {
+  position: relative;
+  height: 80vh; /* Se verá como un banner alto */
+  background: url("https://via.placeholder.com/1920x1080?text=Espacio") no-repeat center center / cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#hero::before {
+  content: "";
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  background: rgba(0, 0, 0, 0.4); /* Oscurece la imagen de fondo */
+}
+
+.hero-content {
+  position: relative;
+  text-align: center;
+  z-index: 1; /* Para que el texto esté delante del overlay */
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.hero-btn {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #007ACC;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.hero-btn:hover {
+  background-color: #005ea6;
+}
+
+/* 4. Sección Título (opcional) */
+.title-section {
+  text-align: center;
+  padding: 1rem;
+}
+
+/* 5. Secciones de contenido */
 section {
-  margin: 40px 0;
-  padding: 20px;
-  border-top: 1px solid #444;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 section h2 {
-  margin-bottom: 10px;
+  margin-bottom: 1rem;
 }
 
-/* Estilo del footer */
+/* 6. Footer */
 footer {
   text-align: center;
-  margin-top: 40px;
+  padding: 1rem;
   font-size: 0.9rem;
+  background-color: #111;
+  margin-top: 2rem;
   color: #aaa;
+}
+
+/* 7. Light mode */
+body.light-mode {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+/* Cambiamos sólo el header si querés más contraste en light mode */
+body.light-mode header {
+  background-color: #ddd;
+}
+
+body.light-mode #toggleBackground {
+  background: #666;
+  color: #000;
+}
+
+body.light-mode #hero::before {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+/* Sección Noticias */
+#noticias {
+  padding: 60px 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+#noticias h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #222;
+}
+
+.noticia {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 800px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-align: left;
+}
+
+.noticia h3 {
+  font-size: 1.5rem;
+  color: #004080;
+}
+
+.noticia p {
+  font-size: 1rem;
+  color: #444;
+}
+
+.leer-mas {
+  display: inline-block;
+  margin-top: 10px;
+  text-decoration: none;
+  color: #007BFF;
+  font-weight: bold;
+}
+
+.leer-mas:hover {
+  text-decoration: underline;
 }
